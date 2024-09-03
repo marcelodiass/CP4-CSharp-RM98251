@@ -1,0 +1,23 @@
+﻿openapi: 3.1.0
+info:
+  title: Exchange Rate
+  description: Esta é uma API que retorna a taxa de câmbio de Dolar para Real.
+  version: 1.0.0
+paths:
+  /api/Exchange:
+    get:
+      summary: Retorna a taxa de câmbio de Dolar para Real.
+      responses:
+        '200':
+          description: "currencyPair :  USD/BRL rate : 5.6153 date : 2024-09-03T10:18:48.9121173-03:00"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  currencyPair:
+                    type: string
+                  rate:
+                    type: double
+                  date:
+                    type: date
